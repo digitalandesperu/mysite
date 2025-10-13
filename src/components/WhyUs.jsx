@@ -4,7 +4,7 @@ import Headphones from "@/assets/icons/Headphones";
 import Users from "@/assets/icons/User";
 
 const WhyUs = () => (
-  <section id="por-qué-elegirnos" className="py-20 px-6 bg-[#0f172a] text-center">
+  <section id="por-que-elegirnos" className="py-20 px-6 bg-[#0f172a] text-center">
     <h3 className="text-6xl font-bold mb-4">¿Por qué elegirnos?</h3>
     <p className="text-slate-400 text-xl mb-12">Trabajamos con las mejores prácticas y tecnologías del mercado</p>
     <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">

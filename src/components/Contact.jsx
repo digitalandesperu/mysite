@@ -136,9 +136,7 @@ export default function Contact() {
           <option>Landing Page</option>
           <option>Sitio Web Corporativo</option>
           <option>Tienda E-commerce</option>
-          <option>SEO / Posicionamiento</option>
-          <option>Branding / Logo</option>
-          <option>App Móvil</option>
+          <option>Inteligencia Artificial</option>
           <option>Otro</option>
         </select>
 
