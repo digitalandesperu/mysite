@@ -14,9 +14,11 @@ const Services = () => (
         },
         { icon: <ShoppingCart width="40px" height="40px" />, title: "Tiendas Online", desc: "Lanza tu tienda online lista para vender desde el día uno. Con pasarelas de pago seguras, diseño intuitivo y un panel que tú mismo puedes administrar." },
         {
-          icon: <LandingPage width="40px" height="40px" />, title: "Landing Pages", desc: "Convierte visitantes en clientes con una landing page diseñada para captar atención y generar acción. Ideal para campañas publicitarias, lanzamientos o promociones que buscan resultados inmediatos." },
+          icon: <LandingPage width="40px" height="40px" />, title: "Landing Pages", desc: "Convierte visitantes en clientes con una landing page diseñada para captar atención y generar acción. Ideal para campañas publicitarias, lanzamientos o promociones que buscan resultados inmediatos."
+        },
         {
-          icon: <SettingsIcon width="40px" height="40px" />, title: "Inteligencia Artificial para tu negocio", desc: "Lleva tu negocio al siguiente nivel con soluciones de Inteligencia Artificial a medida: chatbots inteligentes, automatización de procesos, análisis predictivo y más. Ahorra tiempo, reduce costos y haz que tu empresa trabaje por ti." },
+          icon: <SettingsIcon width="40px" height="40px" />, title: "Inteligencia Artificial para tu negocio", desc: "Lleva tu negocio al siguiente nivel con soluciones de Inteligencia Artificial a medida: chatbots inteligentes, automatización de procesos, análisis predictivo y más. Ahorra tiempo, reduce costos y haz que tu empresa trabaje por ti."
+        },
       ].map((s, i) => (
         <div key={i} className="p-6 bg-[#1e293b] rounded-xl border border-[#334155] transition-all duration-300 hover:shadow-xl hover:shadow-white/7 hover:scale-100 group">
           <div className="text-3xl mb-4 transition-transform duration-300 group-hover:scale-112">{s.icon}</div>

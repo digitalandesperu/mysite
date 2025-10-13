@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import testimonialsData from "@/assets/data/testimonials.json";
+import Comillas from "@/assets/icons/Comillas";
 
 const Testimonials = () => {
   const scrollRef = useRef(null);
@@ -55,6 +56,7 @@ const Testimonials = () => {
                 key={i}
                 className="snap-center flex-shrink-0 w-80 md:w-96 bg-[#1e293b] rounded-xl border border-[#334155] hover:border-cyan-400 transition-all text-left p-6"
               >
+                <Comillas />
                 <p className="text-slate-300 italic mb-4">“{t.text}”</p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center font-bold text-white">
