@@ -1,0 +1,9 @@
+export { default as Navbar } from "./NavBar.jsx";
+export { default as Hero } from "./Hero.jsx";
+export { default as Services } from "./Services.jsx";
+export { default as WhyUs } from "./WhyUs.jsx";
+export { default as Projects } from "./Projects.jsx";
+export { default as Testimonials } from "./Testimonials.jsx";
+export { default as Contact } from "./Contact.jsx";
+export { default as Footer } from "./Footer.jsx";
+export { default as WhatsAppButton } from "./Whatsapp.jsx";
