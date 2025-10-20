@@ -87,18 +87,18 @@ const Footer = () => {
           </p>
           <a
             href="#contacto"
-            className="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-4 py-2 font-medium text-white hover:bg-cyan-400"
+            className="inline-flex items-center gap-2 rounded-lg bg-cyan-600 px-4 py-2 font-medium text-white hover:bg-cyan-500 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400"
           >
             Solicitar cotización
             <span aria-hidden>→</span>
           </a>
         </div>
-        <div className="max-w-6xl mx-auto px-6 pb-8 text-xs text-slate-600 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-6xl mx-auto px-6 pb-8 text-xs text-slate-400 flex flex-col md:flex-row items-center justify-between gap-4">
           <p>© {year} Digital Andes Perú. Todos los derechos reservados.</p>
           <div className="flex gap-4">
-            <a href="/terminos" className="hover:text-cyan-400">Términos</a>
-            <a href="/privacidad" className="hover:text-cyan-400">Privacidad</a>
-            <a href="/cookies" className="hover:text-cyan-400">Cookies</a>
+            <a href="/terminos" className="hover:text-cyan-400 transition-colors">Términos</a>
+            <a href="/privacidad" className="hover:text-cyan-400 transition-colors">Privacidad</a>
+            <a href="/cookies" className="hover:text-cyan-400 transition-colors">Cookies</a>
           </div>
         </div>
       </div>

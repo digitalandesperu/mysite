@@ -127,11 +127,15 @@ export default function Contact() {
         />
 
         {/* Servicio (opcional) */}
+        <label htmlFor="servicio" className="block text-sm font-medium text-slate-200 mb-2">
+          Tipo de servicio
+        </label>
         <select
+          id="servicio"
           name="servicio"
           value={formData.servicio}
           onChange={handleChange}
-          className="w-full p-3 rounded-lg bg-[#0f172a] border border-[#334155] text-white"
+          className="w-full p-3 rounded-lg bg-[#0f172a] border border-[#334155] text-white focus:border-cyan-400 focus:outline-none"
         >
           <option>Landing Page</option>
           <option>Sitio Web Corporativo</option>
@@ -153,13 +157,13 @@ export default function Contact() {
 
         {/* Política (opcional) + URL de página */}
         <input type="hidden" name="page_url" value={formData.page_url} readOnly />
-        <label className="flex items-center gap-3 text-slate-300 text-sm">
+        <label className="flex items-center gap-3 text-slate-200 text-sm">
           <input
             type="checkbox"
             name="acepta_politica"
             checked={formData.acepta_politica}
             onChange={handleChange}
-            className="w-4 h-4"
+            className="w-4 h-4 text-cyan-600 focus:ring-cyan-500"
           />
           Acepto ser contactado por Digital Andes y la política de privacidad.
         </label>
@@ -180,7 +184,7 @@ export default function Contact() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-cyan-500 hover:bg-cyan-400 disabled:opacity-60 py-3 rounded-lg font-semibold text-white"
+          className="w-full bg-cyan-600 hover:bg-cyan-500 disabled:opacity-60 py-3 rounded-lg font-semibold text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400"
         >
           {loading ? "Enviando..." : "Enviar mensaje ✈️"}
         </button>

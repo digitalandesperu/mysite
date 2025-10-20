@@ -1,4 +1,5 @@
 
+import LazyImage from "./LazyImage";
 
 const Projects = () => {
   const projects = [
@@ -49,10 +50,12 @@ const Projects = () => {
           >
             {/* Image Overlay (aparece en hover) */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
-              <img
+              <LazyImage
                 src={project.image}
-                alt={project.title}
+                alt={`Captura del proyecto ${project.title}`}
                 className="w-full h-full object-cover"
+                width={400}
+                height={300}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
             </div>

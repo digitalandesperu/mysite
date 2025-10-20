@@ -1,37 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Digital Andes Perú | Desarrollo Web y Soluciones con IA</title>
 
-    <meta
-      name="description"
-      content="Creamos páginas web profesionales, tiendas online y soluciones con inteligencia artificial para hacer crecer tu negocio."
-    />
+    <meta name="description" content="Creamos páginas web profesionales, tiendas online y soluciones con inteligencia artificial para hacer crecer tu negocio." />
 
-    <meta
-      name="keywords"
-      content="desarrollo web, páginas web, landing pages, tiendas online, inteligencia artificial, diseño web Perú, Digital Andes Perú"
-    />
+    <meta name="keywords" content="desarrollo web, páginas web, landing pages, tiendas online, inteligencia artificial, diseño web Perú, Digital Andes Perú" />
 
     <meta name="author" content="Digital Andes Perú" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#0891b2" />
 
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="./src/assets/img/favicon.ico"
-    />
+    <!-- Geolocalización -->
+    <meta name="geo.region" content="PE" />
+    <meta name="geo.country" content="Peru" />
+    <meta name="geo.placename" content="Lima" />
+
+    <link rel="icon" type="image/svg+xml" href="./src/assets/img/favicon.ico" />
 
     <meta property="og:title" content="Digital Andes Perú | Desarrollo Web & IA" />
-    <meta
-      property="og:description"
-      content="Creamos páginas web y soluciones digitales inteligentes que impulsan tu negocio al siguiente nivel."
-    />
+    <meta property="og:description" content="Creamos páginas web y soluciones digitales inteligentes que impulsan tu negocio al siguiente nivel." />
     <meta property="og:image" content="https://digitalandesperu.com/assets/preview.jpg" />
     <meta property="og:url" content="https://digitalandesperu.com/" />
     <meta property="og:type" content="website" />
@@ -39,20 +31,82 @@
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Digital Andes Perú | Desarrollo Web & IA" />
-    <meta
-      name="twitter:description"
-      content="Desarrollo web, tiendas online y soluciones con IA para negocios inteligentes."
-    />
+    <meta name="twitter:description" content="Desarrollo web, tiendas online y soluciones con IA para negocios inteligentes." />
     <meta name="twitter:image" content="https://digitalandesperu.com/assets/preview.jpg" />
 
     <link rel="canonical" href="https://digitalandesperu.com/" />
 
+    <!-- Preload crítico para LCP -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Preload JS crítico -->
+    <link rel="modulepreload" href="/src/main.jsx" />
+    <link rel="modulepreload" href="/src/App.jsx" />
+
+    <!-- CSS crítico inline para LCP -->
+    <style>
+      /* Estilos críticos para el Hero - evita FOUC + COLORES */
+      #inicio {
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 8rem 1.5rem 6rem;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      /* Efectos de fondo coloridos */
+      #inicio::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: conic-gradient(from 0deg at 50% 50%, 
+          rgba(6, 182, 212, 0.1) 0deg,
+          rgba(147, 51, 234, 0.1) 120deg, 
+          rgba(6, 182, 212, 0.1) 240deg,
+          rgba(147, 51, 234, 0.1) 360deg);
+        animation: rotate 20s linear infinite;
+        z-index: -1;
+      }
+      
+      @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      
+      /* Gradiente animado para H1 */
+      .animate-gradient {
+        background-size: 300% 300%;
+        animation: gradientShift 4s ease infinite;
+      }
+      
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      
+      #inicio h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+      @media (min-width: 768px) {
+        #inicio h1 { font-size: 3.75rem; }
+      }
+    </style>
 
     <script type="application/ld+json">
       {
@@ -61,11 +115,7 @@
         "name": "Digital Andes Perú",
         "url": "https://digitalandesperu.com",
         "logo": "https://digitalandesperu.com/assets/logo.png",
-        "sameAs": [
-          "https://www.facebook.com/digitalandesperu",
-          "https://www.instagram.com/digitalandesperu",
-          "https://www.linkedin.com/company/digitalandesperu"
-        ],
+        "sameAs": ["https://www.facebook.com/digitalandesperu", "https://www.instagram.com/digitalandesperu", "https://www.linkedin.com/company/digitalandesperu"],
         "description": "Desarrollo web profesional, tiendas online y soluciones de inteligencia artificial para negocios en Perú y Latinoamérica."
       }
     </script>
